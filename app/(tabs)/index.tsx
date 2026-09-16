@@ -1,13 +1,13 @@
 import { Text } from "react-native";
 import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView} from "react-native-safe-area-context";
 
-const Insights = () => {
+const Home = () => {
   return (
     <SafeAreaView className="flex-1 bg-yellow-50 p-5">
-      <Text>Insights</Text>
+      <Text>Home</Text>
     </SafeAreaView>
   );
 };
 
-export default Insights;
+export default Home;
