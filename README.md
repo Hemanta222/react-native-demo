@@ -48,3 +48,38 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+## set to set fonts
+
+- download the .ttf fonts and paste assets/fonts directory
+- include the following in RootLayout (_layout.tsx) as
+  const [fontsLoaded] = useFonts({
+  "sans-regular": require("../assets/fonts/Inter_18pt-Regular.ttf"),
+  "sans-medium": require("../assets/fonts/Inter_18pt-Medium.ttf"),
+  "sans-bold": require("../assets/fonts/Inter_18pt-Bold.ttf"),
+  "sans-light": require("../assets/fonts/Inter_18pt-Light.ttf"),
+  "sans-semibold": require("../assets/fonts/Inter_18pt-SemiBold.ttf"),
+  "sans-extrabold": require("../assets/fonts/Inter_24pt-ExtraBold.ttf"),
+  });
+
+  useEffect(() => {
+  if (fontsLoaded) {
+  SplashScreen.hideAsync();
+  }
+  }, [fontsLoaded]);
+
+- add the follwoing in tailwind.config.js
+  theme: {
+  extend: {
+  fontFamily: {
+  sans: ["sans-regular"],
+  "sans-light": ["sans-light"],
+  "sans-medium": ["sans-medium"],
+  "sans-semibold": ["sans-semibold"],
+  "sans-bold": ["sans-bold"],
+  "sans-extrabold": ["sans-extrabold"],
+  },
+  },
+  },
+
+- apply font styles to text - use classnames like font-sans-bold,font-sans-extrabold,font-sans-regular,font-sans-light,font-sans-semibold
