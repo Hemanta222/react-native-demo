@@ -16,7 +16,7 @@ export default function Index() {
         {" "}
         Go to Subscription
       </Link>
-      <Link
+      {/* <Link
         href={{
           pathname: "/(tabs)/subscriptions/[id]",
           params: { id: "sporify" },
@@ -25,7 +25,7 @@ export default function Index() {
       >
         {" "}
         Subscription spotify
-      </Link>
+      </Link> */}
     </View>
   );
 }
